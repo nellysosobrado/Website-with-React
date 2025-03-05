@@ -1,38 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const FAQ = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [faqs, setFaqs] = useState([]);
+
+  useEffect(() => {
+    const fetchFAQs = async () => {
+      try {
+        const response = await fetch('https://kyhn24.azurewebsites.net/api/faq');
+        console.log('API Response:', response);
+        console.log('Response headers:', response.headers);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const rawText = await response.text();
+        console.log('Raw response:', rawText);
+        
+        try {
+          const data = JSON.parse(rawText);
+          console.log('Parsed data:', data);
+          setFaqs(data);
+          setIsLoading(false);
+        } catch (parseError) {
+          throw new Error(`JSON parsing error: ${parseError.message}. Raw response: ${rawText.substring(0, 100)}...`);
+        }
+      } catch (err) {
+        console.error('Fetch error:', err);
+        setError(err.message);
+        setIsLoading(false);
+      }
+    };
+
+    fetchFAQs();
+  }, []);
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
-
-  const faqItems = [
-    {
-      question: "Is any of my personal information stored in the App?",
-      answer: "Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat."
-    },
-    {
-      question: "What formats can I download my transaction history in?",
-      answer: "Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum."
-    },
-    {
-      question: "Can I schedule future transfers?",
-      answer: "Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum."
-    },
-    {
-      question: "When can I use Banking App services?",
-      answer: "Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum."
-    },
-    {
-      question: "Can I create my own password that is easy for me to remember?",
-      answer: "Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum."
-    },
-    {
-      question: "What happens if I forget or lose my password?",
-      answer: "Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum."
-    }
-  ];
 
   return (
     <section id="FAQS">
@@ -66,35 +74,67 @@ const FAQ = () => {
           </div>
 
           <div className="right-column">
-            <div className="faq-list">
-              {faqItems.map((item, index) => (
-                <div key={index} className="faq-item">
-                  <div 
-                    className="faq-question"
-                    onClick={() => toggleFAQ(index)}
-                  >
-                    <p>
-                      {item.question}
-                      <span className="faq-toggle-icons">
-                        <img 
-                          className={`arrow-down ${openFAQ === index ? 'hidden' : ''}`}
-                          src="/images/arrow-down.svg" 
-                          alt="Show"
-                        />
-                        <img 
-                          className={`arrow-up ${openFAQ === index ? '' : 'hidden'}`}
-                          src="/images/arrow-down.svg" 
-                          alt="Hide"
-                        />
-                      </span>
-                    </p>
+            {isLoading ? (
+              <div className="loading">
+                <img src="/images/loading-spinner.svg" alt="Loading..." />
+                <p>Laddar FAQ...</p>
+              </div>
+            ) : error ? (
+              <div className="error">
+                <p>Ett fel uppstod: {error}</p>
+                <button 
+                  onClick={() => {
+                    setError(null);
+                    setIsLoading(true);
+                    fetchFAQs();
+                  }}
+                  className="retry-button"
+                >
+                  Försök igen
+                </button>
+              </div>
+            ) : faqs.length === 0 ? (
+              <div className="no-faqs">
+                <p>Inga vanliga frågor tillgängliga för tillfället.</p>
+              </div>
+            ) : (
+              <div className="faq-list">
+                {faqs.map((item, index) => (
+                  <div key={index} className="faq-item">
+                    <div 
+                      className={`faq-question ${openFAQ === index ? 'active' : ''}`}
+                      onClick={() => toggleFAQ(index)}
+                    >
+                      <p>
+                        {item.title}
+                        <span className="faq-toggle-icons">
+                          <img 
+                            className={`arrow-down ${openFAQ === index ? 'hidden' : ''}`}
+                            src="/images/arrow-down.svg" 
+                            alt="Show"
+                          />
+                          <img 
+                            className={`arrow-up ${openFAQ === index ? '' : 'hidden'}`}
+                            src="/images/arrowup.svg" 
+                            alt="Hide"
+                          />
+                        </span>
+                      </p>
+                    </div>
+                    <div 
+                      className={`faq-answer ${openFAQ === index ? 'active' : ''}`}
+                      style={{
+                        maxHeight: openFAQ === index ? '1000px' : '0',
+                        overflow: 'hidden',
+                        transition: 'max-height 0.3s ease-in-out'
+                      }}
+                    >
+                      <p>{item.content}</p>
+                    </div>
                   </div>
-                  <div className={`faq-answer ${openFAQ === index ? 'active' : ''}`}>
-                    <p>{item.answer}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

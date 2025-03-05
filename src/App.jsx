@@ -9,6 +9,7 @@ import MainNavigation from './components/elements/MainNavigation';
 import Contacts from './pages/Contacts';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaqProvider } from './contexts/FaqContext'
 
 const App = () => {
   // Initiera AOS
@@ -23,14 +24,16 @@ const App = () => {
   return (
     <BrowserRouter>
       <AppProvider>
-        <div className="app">
-          <MainNavigation />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/feature" element={<Feature />} />
-            <Route path="/contacts" element={<Contacts />} />
-          </Routes>
-        </div>
+        <FaqProvider>
+          <div className="app">
+            <MainNavigation />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/feature" element={<Feature />} />
+              <Route path="/contacts" element={<Contacts />} />
+            </Routes>
+          </div>
+        </FaqProvider>
       </AppProvider>
     </BrowserRouter>
   );
