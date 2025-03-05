@@ -17,21 +17,23 @@ const AppFeatures = () => {
               <div className="appfeatures-info-boxes">
                 <div className="column">
                   <div className="appfeatures-info-box">
-                    <img src="/images/Recieve-section/credit-card.svg" alt="Credit Card Icon" />
+                    <div className="icon-wrapper">
+                      <img src="/images/appfeatureslogos/paymentlogo.svg" alt="Credit Card Icon" />
+                    </div>
                     <div className="text-content">
                       <h5>Easy Payments</h5>
                       <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
                     </div>
                   </div>
                   <div className="appfeatures-info-box">
-                    <img src="/images/Recieve-section/wallet.svg" alt="Wallet Icon" />
+                    <img src="/images/appfeatureslogos/staticlogo.svg" alt="Static Logo" />
                     <div className="text-content">
                       <h5>Cost Statistics</h5>
                       <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
                     </div>
                   </div>
                   <div className="appfeatures-info-box">
-                    <img src="/images/Recieve-section/credit-card.svg" alt="Credit Card Icon" />
+                  <img src="/images/appfeatureslogos/cashbacklogo.svg" alt="Cashback Logo" />
                     <div className="text-content">
                       <h5>Regular Cashback</h5>
                       <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
@@ -40,21 +42,21 @@ const AppFeatures = () => {
                 </div>
                 <div className="column">
                   <div className="appfeatures-info-box">
-                    <img src="/images/Recieve-section/wallet.svg" alt="Wallet Icon" />
+                    <img src="/images/appfeatureslogos/SecurityLogo.svg" alt="Wallet Icon" />
                     <div className="text-content">
                       <h5>Data Security</h5>
                       <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
                     </div>
                   </div>
                   <div className="appfeatures-info-box">
-                    <img src="/images/Recieve-section/credit-card.svg" alt="Credit Card Icon" />
+                    <img src="/images/appfeatureslogos/supportlogo.svg" alt="Credit Card Icon" />
                     <div className="text-content">
                       <h5>Support 24/7</h5>
                       <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
                     </div>
                   </div>
                   <div className="appfeatures-info-box">
-                    <img src="/images/Recieve-section/wallet.svg" alt="Wallet Icon" />
+                    <img src="/images/appfeatureslogos/standardlogo.svg" alt="Wallet Icon" />
                     <div className="text-content">
                       <h5>Standards</h5>
                       <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
