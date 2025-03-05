@@ -1,0 +1,23 @@
+.imageslider {
+    display: grid;
+
+    @media (width >= 768px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    @media (width >= 1400px) {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+    }
+
+
+    .imageslider-item {
+        border: 1px solid var(--border-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+        border-radius: 8px;
+    }
+}

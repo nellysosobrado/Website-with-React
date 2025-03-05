@@ -3,14 +3,12 @@ import { AppProvider } from './context/AppContext';
 import HomePage from './pages/HomePage';
 import './styles/main.css';
 
-const App = () => {
+function App() {
   return (
     <AppProvider>
-      <div className="app">
-        <HomePage />
-      </div>
+      <HomePage />
     </AppProvider>
   );
-};
+}
 
-export default App;
+export default App; 
