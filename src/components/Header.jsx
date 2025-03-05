@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useApp } from '../context/AppContext';
+import logo from '/images/siliconlogo.svg';
 
 const Header = () => {
   const context = useApp();
@@ -16,6 +17,7 @@ const Header = () => {
     <header>
       <div className="container">
         <div className="logo">
+          <img id="logo-image" src={logo} alt="Silicon Inc." />
           <span>Silicon</span>
         </div>
 
