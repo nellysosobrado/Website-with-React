@@ -3,12 +3,35 @@ import React, { useState } from 'react';
 const Subscribe = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isError, setIsError] = useState(false);
 
-  const handleSubscribe = (event) => {
+  const handleSubscribe = async (event) => {
     event.preventDefault();
-    // Här kan du implementera prenumerationslogiken
-    setMessage('Tack för din prenumeration!');
-    setEmail('');
+    setIsError(false);
+    setMessage('');
+
+    try {
+      const response = await fetch('https://kyhn24.azurewebsites.net/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Något gick fel vid prenumerationen');
+      }
+
+      setMessage('Tack för din prenumeration! Du är nu registrerad.');
+      setEmail('');
+    } catch (error) {
+      setIsError(true);
+      setMessage('Ett fel uppstod. Vänligen försök igen senare.');
+      console.error('Subscription error:', error);
+    }
   };
 
   return (
@@ -35,7 +58,11 @@ const Subscribe = () => {
                 Subscribe <i className="bi bi-arrow-right"></i>
               </button>
             </div>
-            {message && <div id="subscribe-message">{message}</div>}
+            {message && (
+              <div id="subscribe-message" className={isError ? 'error' : 'success'}>
+                {message}
+              </div>
+            )}
           </form>
         </div>
       </div>
