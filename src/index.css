@@ -915,6 +915,8 @@ footer{
 .info-box {
     display: flex;
     gap: 1rem;
+    background-color: transparent;
+    border: none;
   }
   
 }
@@ -928,16 +930,7 @@ footer{
   display: block;
 }
 
-/* Registreringsformulär
-   Här stylas registreringsformuläret som visas när användaren klickar på logga in/registrera.
-   Formuläret visas som ett överlägg ovanpå huvudinnehållet.
-   Det innehåller:
-   - Halvgenomskinlig bakgrund över hela skärmen
-   - Centrerad vit ruta med formulärfält
-   - Stängknapp uppe till höger  
-   - Formaterade textfält och kryssruta
-   - Anpassningsbar bredd (80% med max 500px)
-*/
+
 
 #registration-modal {
     display: none;
@@ -1192,6 +1185,134 @@ footer{
     margin: 0 auto;
 }
 
+}
+
+.info-boxes-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.info-box-header {
+  padding: 1rem;
+  background: transparent;
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .info-box {
+  background: transparent;
+}
+
+[data-theme="dark"] .info-box-header {
+  background: transparent;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--button-background-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.info-box-content {
+  padding: 1.5rem;
+}
+
+.testimonial-text {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.author-name {
+  color: var(--text-headline-color);
+  font-weight: 600;
+}
+
+.quote-text {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.reviews-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: start;
+}
+
+.section-title-container {
+  width: 30%;
+  position: sticky;
+  top: 2rem;
+}
+
+.info-boxes-container {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.info-box {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
+  .reviews-layout {
+    flex-direction: column;
+  }
+  
+  .section-title-container,
+  .info-boxes-container {
+    width: 100%;
+  }
+  
+  .info-boxes-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-title {
+  margin-top: 4px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.quote-marks {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.rating {
+  display: block;
 }
 
 
