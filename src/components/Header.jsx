@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import logo from '/images/siliconlogo.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const context = useApp();
@@ -22,8 +23,8 @@ const Header = () => {
         </div>
 
         <nav className="main-nav">
-          <a href="#">Features</a>
-          <a href="#">Contact</a>
+          <Link to="/features">Features</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
 
         <div className="darkmode">

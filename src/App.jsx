@@ -1,15 +1,27 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import HomePage from './pages/HomePage';
 import "./index.css";
+import { Routes, Route } from 'react-router-dom';
+import Feature from './pages/Feature';
+import MainNavigation from './components/elements/MainNavigation';
+import Contacts from './pages/Contacts';
 
 const App = () => {
   return (
-    <AppProvider>
-      <div className="app">
-        <HomePage />
-      </div>
-    </AppProvider>
+    <BrowserRouter>
+      <AppProvider>
+        <div className="app">
+          <MainNavigation />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/feature" element={<Feature />} />
+            <Route path="/contacts" element={<Contacts />} />
+          </Routes>
+        </div>
+      </AppProvider>
+    </BrowserRouter>
   );
 };
 
