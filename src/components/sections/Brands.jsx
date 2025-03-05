@@ -14,7 +14,6 @@ const Brands = () => {
   return (
     <section id="brands">
         <div className="container">
-          <h2>Our Clients</h2>
           <ImageSlider images={brands} />
         </div>
     </section>

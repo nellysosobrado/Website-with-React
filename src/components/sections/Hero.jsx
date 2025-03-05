@@ -7,12 +7,15 @@ const Hero = () => {
         <div className="content-wrapper">
           <div className="text-column">
             <div className="section-title">
-              <h2>Manage All Your Money in One App</h2>
+              <h2>
+                <span className="title-row">Manage All Your</span>
+                <span className="title-row">Money in One App</span>
+              </h2>
             </div>
             <div className="section-body">
               <p>
-                We offer you a new generation of the mobile banking.
-                Save, spend & manage money in your pocket.
+                <span className="body-row">We offer you a new generation of the mobile banking.</span>
+                <span className="body-row">Save, spend & manage money in your pocket.</span>
               </p>
               <div className="info-box">
                 <img src="/images/appstore.svg" alt="App Store" />
