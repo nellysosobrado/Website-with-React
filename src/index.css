@@ -246,6 +246,8 @@ a {
     background-color: var(--button-download-background);
     border-color: var(--button-download-border);
     color: var(--button-download-text);
+    width: 100%;
+    max-width: 200px;
 
     .button-content {
         display: grid;
@@ -256,16 +258,29 @@ a {
     
         i, img {
             grid-area: icon;
-            font-size: 2.0em;
+            width: 2em;
+            height: 2em;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2em;
         }
+
+        img {
+            object-fit: contain;
+        }
+
         .description {
             grid-area: desc;
             font-size: 0.7em;
+            white-space: nowrap;
         }
     
         .text {
             grid-area: name;
             font-size: 1em;
+            white-space: nowrap;
         }
     }
 
