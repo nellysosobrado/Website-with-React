@@ -507,6 +507,29 @@ form {
         align-items: center;
         gap: 3rem;
     }
+/* desktop resolution hides feature,contacts and sign in button */
+    @media screen and (max-width: 1024px) {
+        .hide-mobile {
+            display: none;
+        }
+    }
+/* mobile resolution shows different menu icon */
+    .btn-mobilemenu {
+        display: block;
+        font-size: 3rem;
+        border: 1px solid transparent;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--text-color);
+
+        &:hover {
+            border: 1px solid var(--text-color);
+        }
+
+        @media(width >= 1024px) {
+            display: none;
+        }   
+    }
 
     .logotype {
         display: flex;
@@ -534,9 +557,15 @@ form {
             display: block;
         }
     }
-
-    .btn-account {
-        display: block;
+/* darkmode switch button position */
+    .theme-switch-wrapper {
+        justify-self: end;
+    }
+/* corrects the tablet menu icon position */
+    @media (max-width: 1024px) {
+        .container {
+            grid-template-columns: auto 1fr auto;
+        }
     }
 }
 
@@ -1071,3 +1100,4 @@ form {
     text-align: center;
     padding: 3rem 0;
 }
+

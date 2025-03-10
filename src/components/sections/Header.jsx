@@ -11,18 +11,26 @@ const Header = () => {
     <header id="header">
       <div className="container">
 
-        <Link to="/" className="logotype">
+        <Link to="/" className="logotype hide-mobile">
           <img src={ darkMode ? '/images/logotype_dark.svg' : '/images/logotype_light.svg' } alt="Silicon Inc." />
         </Link>
 
-        <nav>
+        <nav className="hide-mobile">
           <NavLink to="/features" className="nav-link">Features</NavLink>
           <NavLink to="/contacts" className="nav-link">Contacts</NavLink>
         </nav>
         
-        <ToggleSwitch id="theme-switch" text="Dark Mode" currentState={darkMode} currentStateCallback={toggleDarkMode} />
+        <div className="theme-switch-wrapper ">
+          <ToggleSwitch id="theme-switch" text="Dark Mode" currentState={darkMode} currentStateCallback={toggleDarkMode} />
+        </div>
         
-        <LinkButton to="signin" text="sign in" color="purple" icon="bi bi-person" />
+        <div className="hide-mobile">
+          <LinkButton to="signin" text="sign in" color="purple" icon="bi bi-person" />
+        </div>
+        
+        <button className="btn-mobilemenu show-mobile">
+          <i className="bi bi-list"></i>
+        </button>
 
       </div>
     </header>
