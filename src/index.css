@@ -520,7 +520,12 @@ form {
         }
     }
 }
-
+  /* hides darkmode text on mobile */
+  @media (max-width: 390px) {
+    .hide-darkmode-text {
+        display: none;
+    }
+}
 
 /* sections */
 #header {
@@ -547,12 +552,7 @@ form {
             grid-template-columns: auto 1fr auto;
         }
     }
-    /* hides darkmode text on mobile */
-    @media (max-width: 390px) {
-        .hide-darkmode-text {
-            display: none !important;
-        }
-    }
+  
 
 
 
