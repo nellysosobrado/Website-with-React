@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // Hitta switch-elementet
 const darkModeToggle = document.querySelector('.switch input[type="checkbox"]');
 
@@ -22,4 +25,6 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     darkModeToggle.checked = true;
     setTheme(true);
-} 
+}
+
+AOS.init(); 
