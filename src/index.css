@@ -75,6 +75,7 @@
     --text-muted: var(--gray-300-color);
     --text-headline: var(--white-color);
     --text-link: var(--purple-100-color);
+    --hero-text: var(--gray-300-color);
 
     --border: var(--gray-500-color);
 
@@ -634,6 +635,7 @@ form {
         p {
             font-size: 18px;
             margin-bottom: 2rem;
+            color: var(--hero-text, var(--text));
         }
 
         .app-downloads {
