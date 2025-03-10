@@ -6,7 +6,7 @@ const AppFeatures = () => {
       <div className="container">
         <div className="content-wrapper">
           <div className="image-column">
-            <img src="/images/appfeaturephone.svg" alt="statistic" />
+            <img src="public/images/appfeatureslogos/phonefeature.svg" alt="statistic" />
           </div>
           <div className="text-column">
             <div className="section-title">

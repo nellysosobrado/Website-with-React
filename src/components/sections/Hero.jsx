@@ -1,39 +1,30 @@
-import React from 'react';
+import React from 'react'
+import LinkChevronButton from '../elements/LinkChevronButton'
+import LinkDownloadButton from '../elements/LinkDownloadButton'
 
 const Hero = () => {
   return (
-    <section className="hero-section" id="hero-section" data-aos="fade-up">
-      <div className="container">
-        <div className="content-wrapper">
-          <div className="text-column" data-aos="fade-right" data-aos-delay="200">
-            <div className="section-title" data-aos="fade-up" data-aos-delay="400">
-              <h2>
-                <span className="title-row">Manage All Your</span>
-                <span className="title-row">Money in One App</span>
-              </h2>
-            </div>
-            <div className="section-body" data-aos="fade-up" data-aos-delay="600">
-              <p>
-                <span className="body-row">We offer you a new generation of the mobile banking.</span>
-                <span className="body-row">Save, spend & manage money in your pocket.</span>
-              </p>
-              <div className="info-box" data-aos="fade-up" data-aos-delay="800">
-                <img src="/images/appstore.svg" alt="App Store" />
-                <img src="/images/googleplay.svg" alt="Google Play" />
-              </div>
-              <a href="#how-does-it-work-section" className="discover-link" data-aos="fade-up" data-aos-delay="1000">
-                <img src="/images/discover-more-logo.svg" alt="Discover More" />
-                <span>Discover more</span>
-              </a>
-            </div>
-          </div>
-          <div className="image-column" data-aos="fade-left" data-aos-delay="200">
-            <img src="/images/Iphones.svg" alt="iPhones" />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+    <section id="hero">
+        <div className="container">
 
-export default Hero; 
+            <div className="headline">
+                <h1>Manage All Your Money in One App</h1>
+            </div>
+            <div className="content">
+                <p>We offer you a new generation of the mobile banking. Save, spend & manage money inyour pocket.</p>
+                <div className="app-downloads">
+                    <LinkDownloadButton to="/" text="App Store" description="Download on the" icon="fa-brands fa-apple" />
+                    <LinkDownloadButton to="/" text="Google Play" description="GET IT ON" image="/images/icons/googleplay-icon.svg" />
+                </div>
+                <LinkChevronButton to="/" text="Discover more" />
+            </div>
+            <div className="image">
+                <img src="/images/hero-image.svg" alt="" />
+            </div>
+
+        </div>
+    </section>
+  )
+}
+
+export default Hero

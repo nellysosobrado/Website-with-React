@@ -1,60 +1,33 @@
-import React from 'react';
+import React from 'react'
+import LinkButton from '../elements/LinkButton'
 
 const MoneyTransfer = () => {
-  return (
-    <section id="money-transfer-section">
-      <div className="container">
-        <div className="column">
-          <div className="section-title">
-            <h2>Make your money transfer simple and safe</h2>
-          </div>
-          <div className="section-body">
-            <ul className="feature-list">
-              <li className="feature-list-item">
-                <img 
-                  className="feature-icon" 
-                  src="/images/bx-check-circle.svg" 
-                  alt="Check"
-                /> 
-                <span className="feature-text">
-                  Banking transactions are free for you
-                </span>
-              </li>
-              <li className="feature-list-item">
-                <img 
-                  className="feature-icon" 
-                  src="/images/bx-check-circle.svg" 
-                  alt="Check"
-                /> 
-                <span className="feature-text">
-                  No monthly cash commission
-                </span>
-              </li>
-              <li className="feature-list-item">
-                <img 
-                  className="feature-icon" 
-                  src="/images/bx-check-circle.svg" 
-                  alt="Check"
-                /> 
-                <span className="feature-text">
-                  Manage payments and transactions online
-                </span>
-              </li>
-            </ul>
-            <a href="#" className="btn">
-              learn more <i className="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <div className="column">
-          <img 
-            src="/images/transfer-statistic.svg" 
-            alt="statistic"
-          />
-        </div>
-      </div>
-    </section>
-  );
-};
+    return (
+        <section id="money-transfer">
+            <div class="container">
+                <div class="column left">
+                    <div class="content">
+                        <div class="section-title">
+                            <h2>Make your money transfer simple and clear</h2>
+                        </div>
+                        <div class="section-body">
+                            <ul>
+                                <li><i class="fa-regular fa-circle-check"></i>Banking transactions are free for you</li>
+                                <li><i class="fa-regular fa-circle-check"></i>No monthly cash commission</li>
+                                <li><i class="fa-regular fa-circle-check"></i>Manage payments and transactions online</li>
+                            </ul>
+                            <div className="learn-more-link">
+                                <LinkButton to="/" color="purple" text="Learn more" icon="bi bi-arrow-right" iconAfter={true} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <img src="/images/transfer-statisitcs.svg" alt="statistics" />
+                </div>
+            </div>
+        </section>
+    )
+}
 
-export default MoneyTransfer; 
+export default MoneyTransfer

@@ -9,7 +9,7 @@ export const DarkModeProvider = ({children}) => {
         localStorage.setItem('darkMode', darkMode)
         darkMode 
             ? document.documentElement.setAttribute('data-theme', 'dark') 
-            : document.documentElement.removeAttribute('data-theme')
+            : document.documentElement.setAttribute('data-theme', 'light') 
 
     }, [darkMode])
 

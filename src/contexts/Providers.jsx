@@ -2,6 +2,7 @@ import React from 'react'
 import { DarkModeProvider } from './DarkModeContext'
 import { FaqProvider } from './FaqContext'
 import { TestimonialsProvider } from './TestimonalsContext'
+import { BrandsProvider } from './BrandsContext'
 import { SubscribeProvider } from './SubscribeContext'
 
 const Providers = ({children}) => {
@@ -10,9 +11,13 @@ const Providers = ({children}) => {
     <DarkModeProvider>
         <FaqProvider>
             <TestimonialsProvider>
+                
+              <BrandsProvider>
                 <SubscribeProvider>
-                    {children}
+                  {children}
                 </SubscribeProvider>
+              </BrandsProvider>
+            
             </TestimonialsProvider>
         </FaqProvider>
     </DarkModeProvider>
