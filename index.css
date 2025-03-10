@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .hide-darkmode-text {
+    display: none;
+  }
+} 

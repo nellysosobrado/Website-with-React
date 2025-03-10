@@ -20,8 +20,8 @@ const Header = () => {
           <NavLink to="/contacts" className="nav-link">Contacts</NavLink>
         </nav>
         
-        <div className="theme-switch-wrapper ">
-          <ToggleSwitch id="theme-switch" text="Dark Mode" currentState={darkMode} currentStateCallback={toggleDarkMode} />
+        <div className="theme-switch-wrapper">
+          <ToggleSwitch id="theme-switch" text={<span className="hide-darkmode-text">Dark Mode</span>} currentState={darkMode} currentStateCallback={toggleDarkMode} />
         </div>
         
         <div className="hide-mobile">
