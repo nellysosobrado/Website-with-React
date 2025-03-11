@@ -9,10 +9,14 @@ const Subscribe = () => {
         <div className="container">
             <div className="headline">
                 <img src="/images/icons/notification-bell.svg" alt="subscribe notification bell" />
-                <h2>
+                <h2 className="desktop-only">
                     Subscribe to our newsletter 
                     <span> to stay informed about latest updates</span>
                 </h2>
+                <h2 className="hide-desktop">
+                    <span>Subscribe to our newsletter</span>
+                </h2>
+
             </div>
             <div className="subscribe-to-newsletter">
                 <SubscribeForm />

@@ -1260,8 +1260,28 @@ form {
 }
 
 #subscribe {
-
     padding: 0rem 0 0rem;
+
+    /* Show only in desktop mode (>768px) */
+    .desktop-only {
+        display: block;
+    }
+
+    /* Hide in desktop mode (>768px) */
+    .hide-desktop {
+        display: none;
+    }
+
+    /* Hide desktop-only and show hide-desktop in tablet and mobile modes (≤768px) */
+    @media (max-width: 768px) {
+        .desktop-only {
+            display: none;
+        }
+        
+        .hide-desktop {
+            display: block;
+        }
+    }
 
     .container {
         background-color: var(--section-background);
