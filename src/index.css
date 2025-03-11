@@ -988,6 +988,12 @@ form {
 
 #money-transfer {
     padding: 5rem 0;
+    display: block; /* Show by default (desktop) */
+
+    /* Hide section in tablet and mobile modes */
+    @media (max-width: 768px) {
+        display: none;
+    }
 
     .container {
         display: grid;
@@ -1016,7 +1022,6 @@ form {
     }
 
     .section-body {
-
         ul {
             padding: 0;
             margin-bottom: 4rem;
@@ -1038,11 +1043,17 @@ form {
             display: flex;
         }
     }
-
 }
 
 #receive-payment {
     padding: 0rem 0 5rem;
+
+    display: block; /* Show by default (desktop) */
+
+    /* Hide section in tablet and mobile modes */
+    @media (max-width: 768px) {
+        display: none;
+    }
 
     .container {
         display: grid;
@@ -1101,6 +1112,13 @@ form {
 #client-testimonials {
     background-color: var(--section-background);
     padding: 5rem 0;
+
+    display: block; /* Show by default (desktop) */
+
+    /* Hide section in tablet and mobile modes */
+    @media (max-width: 768px) {
+        display: none;
+    }
 
     .container {
         display: grid;
@@ -1279,4 +1297,5 @@ form {
     text-align: center;
     padding: 3rem 0;
 }
+
 
