@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const LinkChevronButton = ({to, text}) => {
     // Function that handles click on the link
     const handleClick = (e) => {
-        // Does not navigate to a new page 
+        // Makes it so it does not navigate to a new page 
         e.preventDefault();
         
         // Finds an element on the page with ID 'App-features-section'

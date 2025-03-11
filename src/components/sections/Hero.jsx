@@ -13,8 +13,8 @@ const Hero = () => {
             <div className="content">
                 <p>We offer you a new generation of the mobile banking. Save, spend & manage money inyour pocket.</p>
                 <div className="app-downloads">
-                    <LinkDownloadButton to="/" text="App Store" description="Download on the" icon="fa-brands fa-apple" />
-                    <LinkDownloadButton to="/" text="Google Play" description="GET IT ON" image="/images/icons/googleplay-icon.svg" />
+                    <LinkDownloadButton to="/AppStore" text="App Store" description="Download on the" icon="fa-brands fa-apple" />
+                    <LinkDownloadButton to="/GooglePlay" text="Google Play" description="GET IT ON" image="/images/icons/googleplay-icon.svg" />
                 </div>
                 <LinkChevronButton to="/" text="Discover more" />
             </div>
