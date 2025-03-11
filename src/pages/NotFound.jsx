@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-
+// 404 page, displays when a page is not found
 function NotFound() {
     return (
         <div className="container">
