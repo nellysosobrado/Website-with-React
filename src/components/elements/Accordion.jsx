@@ -6,7 +6,7 @@ const Accordion = () => {
     const { faqs } = useContext(FaqContext)
 
     return (
-        <div class="accordion" id="faq-accordion">
+        <div className="accordion" id="faq-accordion">
 
             {
                 faqs.map(faq => (<AccordionItem key={faq.id} parent="faq-accordion" item={faq} /> ))

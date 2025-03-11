@@ -9,22 +9,22 @@ const HowDoesItWork = () => {
 
     return (
         <section id="how-does-it-work">
-            <div class="container">
-                <div class="section-title">
+            <div className="container">
+                <div className="section-title">
                     <h2>How Does It Work?</h2>
                 </div>
                 
-                <div class="image-slider">
+                <div className="image-slider">
                     {
                         images.map(image => (
-                            <div key={image.id} class="image-slide">
+                            <div key={image.id} className="image-slide">
                                 <img src={image.src} alt={image.alt} />
                             </div>
                         ))
                     }
                 </div>
 
-                <div class="section-body">
+                <div className="section-body">
                     <h3>Latest transaction history</h3>
                     <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
                 </div>

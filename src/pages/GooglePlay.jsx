@@ -5,7 +5,6 @@ const GooglePlay = () => {
     <div className="container">
       <h1>Google Play Download</h1>
       <p>page under construction</p>
-      {/* Lägg till mer innehåll här */}
     </div>
   )
 }
