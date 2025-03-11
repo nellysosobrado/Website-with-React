@@ -918,6 +918,57 @@ form {
     padding: 5rem 0;
     background-color: var(--section-background);
 
+    /* Desktop default: show all */
+.show-tablet, .hide-tablet {
+    display: block;
+}
+
+/* Tablet mode (768px) */
+@media (max-width: 768px) {
+    .hide-tablet {
+        display: none; /* Dölj element med denna klass */
+    }
+    
+    .show-tablet {
+        display: block; /* Visa element med denna klass */
+    }
+}
+
+/* Show only in desktop mode (>768px) */
+.desktop-only {
+    display: block;
+}
+
+/* Hide in tablet mode and smaller (≤768px) */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* Hide by default (in desktop and mobile) */
+.tablet-only {
+    display: none;
+}
+
+/* Show only in tablet mode (between 391px and 768px) */
+@media (min-width: 391px) and (max-width: 768px) {
+    .tablet-only {
+        display: block;
+    }
+}
+
+/* Show only in mobile mode (≤390px) */
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 390px) {
+    .mobile-only {
+        display: block;
+    }
+}
+
     .section-title {
         text-align: center;
     }
@@ -1228,3 +1279,4 @@ form {
     text-align: center;
     padding: 3rem 0;
 }
+
