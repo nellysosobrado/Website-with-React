@@ -1283,6 +1283,15 @@ form {
         }
     }
 
+    /* Stack layout only in mobile mode (390x499px) */
+    @media (max-width: 390px) and (max-height: 499px) {
+        .subscribe-to-newsletter.mobile-stack {
+            grid-column: 1;
+            grid-row: 2;
+            width: 100%;
+        }
+    }
+
     .container {
         background-color: var(--section-background);
         border-radius: 8px;

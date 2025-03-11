@@ -18,7 +18,7 @@ const Subscribe = () => {
                 </h2>
 
             </div>
-            <div className="subscribe-to-newsletter">
+            <div className="subscribe-to-newsletter mobile-stack">
                 <SubscribeForm />
             </div>
         </div>
