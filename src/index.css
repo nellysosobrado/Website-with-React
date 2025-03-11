@@ -408,16 +408,21 @@ form {
 
 .imageslider {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr); /* Desktop: 6 columns */
     gap: 1rem;
+}
 
-    .imageslider-item {
-        border: 1px solid var(--border);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        border-radius: 8px;
+/* Tablet mode: shows 4 specific brand logos */
+@media (max-width: 768px) {
+    .imageslider {
+        grid-template-columns: repeat(4, 1fr); /* Tablet: 4 columns */
+    }
+}
+
+/* Mobile mode: hide all brands */
+@media (max-width: 390px) {
+    .imageslider {
+        display: none; /* Hide entire slider on mobile */
     }
 }
 
