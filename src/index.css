@@ -967,6 +967,11 @@ form {
     .mobile-only {
         display: block;
     }
+
+    .btn.mobile-only {
+        margin: 1rem auto;
+        max-width: 300px;
+    }
 }
 
     .section-title {
@@ -1189,6 +1194,27 @@ form {
 #faq {
     padding: 5rem 0; 
 
+    /* Hide button by default (desktop and tablet) */
+    .mobile-only {
+        display: none;
+    }
+
+    /* Show only in exact mobile mode (390x499px) */
+    @media (max-width: 390px) and (max-height: 499px) {
+        .mobile-only {
+            display: flex;  /* Changed to flex */
+            justify-content: center;  /* Center horizontally */
+            align-items: center;  /* Center vertically */
+        }
+
+        .mobile-only .btn {
+            display: inline-flex;
+            margin: 1rem auto;
+            padding: 8px 16px;
+            width: auto;
+        }
+    }
+
     .container {
         display: grid;
         gap: 2rem;
@@ -1297,5 +1323,7 @@ form {
     text-align: center;
     padding: 3rem 0;
 }
+
+
 
 
