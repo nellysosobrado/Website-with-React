@@ -25,7 +25,7 @@ const Header = () => {
         </div>
         
         <div className="hide-mobile">
-          <LinkButton to="signin" text="sign in" color="purple" icon="bi bi-person" />
+          <LinkButton to="signin" text="sign in/up" color="purple" icon="bi bi-person" />
         </div>
         
         <button className="btn-mobilemenu show-mobile">
