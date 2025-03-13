@@ -544,9 +544,17 @@ form {
         align-items: center;
         gap: 3rem;
     }
+    /* hides desktop menu icon */
+    .hide-desktop {
+        display: none;
+    }
 
-    
-    
+    @media (max-width: 1024px) {
+        .hide-desktop {
+            display: block;
+        }
+    }
+
     /* desktop resolution hides feature,contacts and sign in button */
     @media screen and (max-width: 1024px) {
         .hide-mobile {
@@ -563,23 +571,7 @@ form {
 
 
 
-    /* mobile resolution shows different menu icon */
-    .btn-mobilemenu {
-        display: block;
-        font-size: 3rem;
-        border: 1px solid transparent;
-        background-color: transparent;
-        cursor: pointer;
-        color: var(--text-color);
 
-        &:hover {
-            border: 1px solid var(--text-color);
-        }
-
-        @media(width >= 1025px) {
-            display: none;
-        }   
-    }
 
     .logotype {
         display: flex;

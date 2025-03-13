@@ -16,8 +16,8 @@ const Header = () => {
         </Link>
 
         <nav className="hide-mobile">
-          <NavLink to="/features" className="nav-link">Features</NavLink>
-          <NavLink to="/contacts" className="nav-link">Contacts</NavLink>
+          <NavLink to="/underconstruction" className="nav-link">Features</NavLink>
+          <NavLink to="/underconstruction" className="nav-link">Contacts</NavLink>
         </nav>
         
         <div className="theme-switch-wrapper">
@@ -25,12 +25,18 @@ const Header = () => {
         </div>
         
         <div className="hide-mobile">
-          <LinkButton to="signin" text="Sign in/up" color="purple" icon="bi bi-person" />
+          <LinkButton to="/underconstruction" text="Sign in/up" color="purple" icon="bi bi-person" />
         </div>
         
-        <button className="btn-mobilemenu show-mobile">
-          <i className="bi bi-list"></i>
-        </button>
+        <div className="hide-desktop">
+            <LinkButton 
+                to="/underconstruction" 
+                className="btn-mobilemenu" 
+                icon="bi bi-list"
+                minimal={true}
+                text=""
+            />
+        </div>
 
       </div>
     </header>

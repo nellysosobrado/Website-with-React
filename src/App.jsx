@@ -6,6 +6,7 @@ import Discover from './pages/Discover'
 import Features from './pages/Features'
 import Contacts from './pages/Contacts'
 import NotFound from './pages/NotFound'
+import UnderConstruction from './pages/UnderConstruction'
 
 import Header from './components/sections/Header'
 import Footer from './components/sections/Footer'
@@ -26,7 +27,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        
         <div className="wrapper">
           <Header />
           <main>
@@ -35,14 +35,15 @@ function App() {
               <Route path="/appstore" element={<AppStore />} />
               <Route path="/googleplay" element={<GooglePlay />} />
               <Route path="/discover" element={<Discover />} />
-              <Route path="/features" element={<Features />} />
-              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/features" element={<UnderConstruction />} />
+              <Route path="/contacts" element={<UnderConstruction />} />
+              <Route path="/underconstruction" element={<UnderConstruction />} />
+              {/* Notfound route displays when a page is not found */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
         </div>
-
       </BrowserRouter>
     </>
   )
