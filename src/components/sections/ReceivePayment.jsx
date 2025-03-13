@@ -1,6 +1,7 @@
 import React from 'react'
 import LinkButton from '../elements/LinkButton'
 
+// ReceivePayment section
 const ReceivePayment = () => {
   return (
     <section id="receive-payment">
@@ -13,6 +14,7 @@ const ReceivePayment = () => {
                     <div class="section-title">
                         <h2>Receive payment from international bank details</h2>
                     </div>
+                    {/* create a list of features */}
                     <div class="section-body">
                         <div className="features">
                             <div className="feature">

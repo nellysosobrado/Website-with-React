@@ -4,6 +4,7 @@ import LinkButton from '../elements/LinkButton'
 import { Link, NavLink } from 'react-router-dom'
 import { DarkModeContext } from '../../contexts/DarkModeContext'
 
+// Header section 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
 
@@ -23,11 +24,12 @@ const Header = () => {
         <div className="theme-switch-wrapper">
           <ToggleSwitch id="theme-switch" text={<span className="hide-darkmode-text">Dark Mode</span>} currentState={darkMode} currentStateCallback={toggleDarkMode} />
         </div>
-        
+
+        {/* Sign in/up button */}
         <div className="hide-mobile">
           <LinkButton to="/underconstruction" text="Sign in/up" color="purple" icon="bi bi-person" />
         </div>
-        
+        {/* Mobile menu button, only visible on mobile */}
         <div className="hide-desktop">
             <LinkButton 
                 to="/underconstruction" 

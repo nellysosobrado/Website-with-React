@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 
+// HowDoesItWork section
 const HowDoesItWork = () => {
+    // Images for the slider
     const [images, setImages] = useState([
         { id: 1, src: '/images/image-sliders/phone-1.svg', alt: 'slide 1'},
         { id: 2, src: '/images/image-sliders/phone-2.svg', alt: 'slide 2'},
         { id: 3, src: '/images/image-sliders/phone-3.svg', alt: 'slide 3'}
     ])
 
+    // Displayed images
     const [displayedImages, setDisplayedImages] = useState(images);
 
     // Update displayed images based on screen size
@@ -21,12 +24,11 @@ const HowDoesItWork = () => {
         }
     };
 
-    // Listen for window resize
+    // Update displayed images based on screen size
     useEffect(() => {
         updateDisplayedImages(); // Initial check
         window.addEventListener('resize', updateDisplayedImages);
-        
-        // Cleanup
+        // Cleans the event listener when the component unmounts
         return () => window.removeEventListener('resize', updateDisplayedImages);
     }, []);
 
@@ -36,7 +38,7 @@ const HowDoesItWork = () => {
                 <div className="section-title" data-aos="fade-down">
                     <h2>How Does It Work?</h2>
                 </div>
-                
+                {/*Image slider, only visible on desktop*/}
                 <div className="image-slider" data-aos="fade-up" data-aos-delay="200">
                     {displayedImages.map((image, index) => (
                         <div 
@@ -49,7 +51,7 @@ const HowDoesItWork = () => {
                         </div>
                     ))}
                 </div>
-
+                {/* Latest transaction history, only visible on desktop */}
                 <div className="container">
                     <div className="section-body desktop-only" data-aos="fade-up" data-aos-delay="400">
                         <h3>Latest transaction history</h3>
@@ -58,7 +60,7 @@ const HowDoesItWork = () => {
                     </div>
                 </div>
             </div>
-
+            {/* Transfers to people from your contact list, only visible on mobile */}
             <div className="container">
                 <div className="section-body mobile-only" data-aos="fade-up" data-aos-delay="400">
                     <h2>Transfers to people from your contact list</h2>
@@ -68,7 +70,7 @@ const HowDoesItWork = () => {
                     </p>
                 </div>
             </div>
-
+            {/* Step 3. Transfers to people from your contact list, only visible on tablet */}
             <div className="container">
                 <div className="section-body tablet-only" data-aos="fade-up" data-aos-delay="400">
                     <h2>Step 3. Transfers to people from your contact list</h2>

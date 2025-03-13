@@ -1,5 +1,5 @@
 import React from 'react';
-
+// AppFeatures section displays the features of the app
 const AppFeatures = () => {
   return (
     <section id="App-features-section">

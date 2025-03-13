@@ -1,8 +1,8 @@
 import React from 'react'
 import SubscribeForm from '../forms/SubscribeForm'
 
+// Subscribe section
 const Subscribe = () => {
-
 
   return (
     <section id="subscribe">
@@ -18,7 +18,9 @@ const Subscribe = () => {
                 </h2>
 
             </div>
+            {/* Subscribe form, only visible on mobile */}
             <div className="subscribe-to-newsletter mobile-stack">
+                {/* Subscribe form component */}
                 <SubscribeForm />
             </div>
         </div>

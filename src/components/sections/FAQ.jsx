@@ -4,6 +4,7 @@ import Accordion from '../elements/Accordion'
 import ContactOption from '../elements/ContactOption'
 import LinkButton from '../elements/LinkButton'
 
+// FAQ section 
 const Faq = () => {
   return (
     <section id="faq">
