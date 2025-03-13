@@ -30,7 +30,7 @@ const ReceivePayment = () => {
                         </div>
 
                         <div className="learn-more-link">
-                            <LinkButton to="/" color="purple" text="Learn more" icon="bi bi-arrow-right" iconAfter={true} />
+                            <LinkButton to="/underconstruction" color="purple" text="Learn more" icon="bi bi-arrow-right" iconAfter={true} />
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ const MoneyTransfer = () => {
                                 <li><i className="fa-regular fa-circle-check"></i>Manage payments and transactions online</li>
                             </ul>
                             <div className="learn-more-link">
-                                <LinkButton to="/" color="purple" text="Learn more" icon="bi bi-arrow-right" iconAfter={true} />
+                                <LinkButton to="/underconstruction" color="purple" text="Learn more" icon="bi bi-arrow-right" iconAfter={true} />
                             </div>
                         </div>
                     </div>

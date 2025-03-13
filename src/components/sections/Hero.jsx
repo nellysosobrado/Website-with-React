@@ -12,8 +12,8 @@ const Hero = () => {
             <div className="content" data-aos="fade-up" data-aos-delay="200">
                 <p>We offer you a new generation of the mobile banking. Save, spend & manage money inyour pocket.</p>
                 <div className="app-downloads" data-aos="fade-up" data-aos-delay="400">
-                    <LinkDownloadButton to="/AppStore" text="App Store" description="Download on the" icon="fa-brands fa-apple" />
-                    <LinkDownloadButton to="/GooglePlay" text="Google Play" description="GET IT ON" image="/images/icons/googleplay-icon.svg" />
+                    <LinkDownloadButton to="/underconstruction" text="App Store" description="Download on the" icon="fa-brands fa-apple" />
+                    <LinkDownloadButton to="/underconstruction" text="Google Play" description="GET IT ON" image="/images/icons/googleplay-icon.svg" />
                 </div>
                 <LinkChevronButton to="/" text="Discover more" />
             </div>
