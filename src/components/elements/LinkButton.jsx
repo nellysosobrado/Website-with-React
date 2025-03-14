@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+// Link button component this will be used to link to a page
 const LinkButton = ({to, text, color, icon, iconAfter}) => {
   
     if (iconAfter) {

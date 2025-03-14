@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ImageSliderItem from './ImageSliderItem'
 
+// Image slider component
 const ImageSlider = ({images}) => {
   const [displayedImages, setDisplayedImages] = useState(images);
 
@@ -19,7 +20,7 @@ const ImageSlider = ({images}) => {
     }
   };
 
-  // Listen for window resize changes
+  // Updates the displayed images based on the screen size
   useEffect(() => {
     updateDisplayedImages(); // Initial check
     window.addEventListener('resize', updateDisplayedImages);

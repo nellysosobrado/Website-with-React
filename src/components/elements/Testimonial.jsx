@@ -1,6 +1,6 @@
 import React from 'react'
 import StarRating from './StarRating'
-
+// Testimonial component
 const Testimonial = ({item}) => {
     return (
         <div className="testimonial">

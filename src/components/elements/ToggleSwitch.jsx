@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Toggle switch component
 const ToggleSwitch = ({id, text, currentState, currentStateCallback}) => {
   return (
     <div className="btn btn-toggle-switch">

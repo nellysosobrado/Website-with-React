@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import AccordionItem from './AccordionItem'
 import { FaqContext } from '../../contexts/FaqContext'
 
+// Accordion component that renders a list of items with a title and content
 const Accordion = () => {
     const { faqs } = useContext(FaqContext)
 

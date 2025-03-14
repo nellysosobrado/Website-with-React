@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// Contact option component
 const ContactOption = ({icon, text, uri, linkText, color}) => {
   return (
     <div className={`contact-option contact-option-${color}`}>

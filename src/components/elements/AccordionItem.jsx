@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Accordion item component
 const AccordionItem = ({parent, item}) => {
   return (
     <div className="accordion-item">
