@@ -5,17 +5,17 @@ import LinkButton from '../elements/LinkButton'
 const ReceivePayment = () => {
   return (
     <section id="receive-payment">
-        <div class="container">
-            <div class="column left">
+        <div className="container">
+            <div className="column left">
                 <img src="/images/receive-payment.svg" alt="payment" />
             </div>
-            <div class="column right">
-                <div class="content">
-                    <div class="section-title">
+            <div className="column right">
+                <div className="content">
+                    <div className="section-title">
                         <h2>Receive payment from international bank details</h2>
                     </div>
                     {/* create a list of features */}
-                    <div class="section-body">
+                    <div className="section-body">
                         <div className="features">
                             <div className="feature">
                                 <div className="feature-icon">
