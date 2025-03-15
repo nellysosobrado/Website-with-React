@@ -58,7 +58,7 @@ const AppFeatures = () => {
                   <div className="appfeatures-info-box">
                     <img src="/images/appfeatureslogos/standardlogo.svg" alt="Wallet Icon" />
                     <div className="text-content">
-                      <h5>Standards</h5>
+                      <h5>Top Standards</h5>
                       <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
                     </div>
                   </div>
