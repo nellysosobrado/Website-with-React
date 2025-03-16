@@ -6,6 +6,7 @@ const SubscribeForm = () => {
   
   return (
     <>
+    {/* this is where the subscribe form, its a form with an email input and a subscribe button */}
       <form onSubmit={handleSubmit} noValidate>
         <i className="fa-regular fa-envelope"></i>
         <input type="email" placeholder="Your email" value={formData.email} onChange={handleChange} />

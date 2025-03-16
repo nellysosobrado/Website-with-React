@@ -18,9 +18,8 @@ const Subscribe = () => {
                 </h2>
 
             </div>
-            {/* Subscribe form, only visible on mobile */}
+            {/* this is the subscribe form */}
             <div className="subscribe-to-newsletter mobile-stack">
-                {/* Subscribe form component */}
                 <SubscribeForm />
             </div>
         </div>
