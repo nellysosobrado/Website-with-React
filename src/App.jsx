@@ -18,7 +18,7 @@ import { DarkModeProvider } from './contexts/DarkModeContext';
 
 function App() {
   
-  // Initiera AOS i useEffect
+  //UseEffect to init AOS library and animate the elements
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -27,10 +27,10 @@ function App() {
   }, []);
 
   return (
-    <AuthProvider>
-      <DarkModeProvider>
-        <BrowserRouter>
-          <div className="wrapper">
+    <AuthProvider> {/* this is the auth provider, a.k.a the context provider for sign in or sign up */}
+      <DarkModeProvider> {/* mode to toggle darkmode or lightmode*/}
+        <BrowserRouter> {/* browser router to navigate between pages */}
+          <div className="wrapper"> {/* this is the wrapper for the app */}
             <Header />
             <main>
               <Routes>
