@@ -1,6 +1,6 @@
 import React from 'react'
 
-// Toggle switch component
+// Toggle switch component to toggle between dark mode and light mode
 const ToggleSwitch = ({id, text, currentState, currentStateCallback}) => {
   return (
     <div className="btn btn-toggle-switch">
