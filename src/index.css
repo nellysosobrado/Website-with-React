@@ -1038,6 +1038,27 @@ form {
 
         .learn-more-link {
             display: flex;
+            transition: all 0.3s ease;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                transition: transform 0.3s ease;
+
+                i {
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            &:hover {
+                a {
+                    transform: translateY(-5px);
+                }
+
+                i {
+                    transform: translateY(-5px);
+                }
+            }
         }
     }
 }
@@ -1101,6 +1122,27 @@ form {
 
         .learn-more-link {
             display: flex;
+            transition: all 0.3s ease;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                transition: transform 0.3s ease;
+
+                i {
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            &:hover {
+                a {
+                    transform: translateY(-5px);
+                }
+
+                i {
+                    transform: translateY(-5px);
+                }
+            }
         }
     }
 
