@@ -10,7 +10,7 @@ const Hero = () => {
             <div className="headline" data-aos="fade-down">
                 <h1>Manage All Your Money in One App</h1>
             </div>
-            {/* content */}
+            {/* content with aos animation */}
             <div className="content" data-aos="fade-up" data-aos-delay="200">
                 <p>We offer you a new generation of the mobile banking. Save, spend & manage money inyour pocket.</p>
                 <div className="app-downloads" data-aos="fade-up" data-aos-delay="400">
@@ -20,7 +20,7 @@ const Hero = () => {
                 {/* Discover more button */}
                 <LinkChevronButton to="/" text="Discover more" />
             </div>
-            {/* image */}
+            {/* image with aos animation */}
             <div className="image" data-aos="fade-left" data-aos-delay="600">
                 <img src="/images/hero-image.svg" alt="" />
             </div>

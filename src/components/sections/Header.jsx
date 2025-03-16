@@ -67,7 +67,7 @@ const Header = () => {
           )}
         </div>
 
-        {/* Mobile menu button with dropdown */}
+        {/* Mobile menu button with dropdown, it will show the menu on mobile . And the menu will be a dropdown menu. */}
         <div className="hide-desktop position-relative">
             <button 
                 className="btn btn-mobilemenu"
@@ -77,6 +77,7 @@ const Header = () => {
             </button>
             
             {isOpen && (
+              
                 <div className="dropdown-menu show position-absolute end-0 mt-2">
                     <NavLink 
                         to="/features" 
