@@ -2,18 +2,16 @@ import React from 'react';
 import { AuthFormProvider } from '../../contexts/AuthFormContext';
 import AuthToggle from '../elements/AuthToggle';
 import AuthForm from '../elements/AuthForm';
+// Auth component to handle login/registration
 
-/**
- * This is a login/registration component that allows users to:Create a new account, login, switch between registration and login modes
- */
 const Auth = () => {
   return (
-    <AuthFormProvider>
+    <AuthFormProvider> {/* calls the aut form provider*/}
       <div id="auth" className="auth-container">
         <div className="auth-row">
           <div className="auth-col">
-            <AuthToggle />
-            <AuthForm />
+            <AuthToggle /> {/* this is the auth toggle component, a.k.a the toggle for the auth form */}
+            <AuthForm /> {/* this is the auth form component, the form for the auth */}
           </div>
         </div>
       </div>
